@@ -1,0 +1,24 @@
+# permissions for end users to edit prides.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pride-editor-role
+rules:
+- apiGroups:
+  - inflion.inflion.com
+  resources:
+  - prides
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - inflion.inflion.com
+  resources:
+  - prides/status
+  verbs:
+  - get

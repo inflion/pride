@@ -1,0 +1,8 @@
+apiVersion: inflion.inflion.com/v1beta1
+kind: Pride
+metadata:
+  name: pride-sample
+spec:
+  prideName: hoge
+  instances:
+   - instance-sample
